@@ -44,7 +44,7 @@ function d(ins, del, sub, eq) {
     }
 }
 
-client.on('ready',() => {
+client.once('ready',() => {
     console.log('I\'m ready!');
 });
 
