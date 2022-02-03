@@ -5,7 +5,7 @@ const {token} = require('./token.json');
 /**
  * 
  * @param {String} w 
- * @param {String} word 
+ * @param {String} v 
  * @returns {Number}
  */
 function levenshteinDistance(w, v) {
@@ -48,19 +48,21 @@ client.on('ready',() => {
     console.log('I\'m ready!');
 });
 
-// same link message in multiple channels
 client.on('message', (msg) => {
     if (msg.guild) {
         let array = msg.cleanContent.match(/https?:\/\/(.+)\..+/);
         if (array) {
             let str = array[1];
             console.log(array);
+            
             let d = levenshteinDistance(str, "discord");
             let d1 = levenshteinDistance(str, "discordapp");
             let d2 = levenshteinDistance(str, "discordgifts");
             if (d1 < d) d = d1;
             if (d2 < d) d = d2;
             //console.log(d);
+            
+            // link similar but not equal to something with discord
             if (d / str.length <= 0.5 && d) {
                 console.log(d / str.length);
                 msg.guild.members.fetch('316212656950476802').then(tim => {
