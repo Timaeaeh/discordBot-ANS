@@ -57,7 +57,7 @@ client.on('message', (msg) => {
             
             let d = levenshteinDistance(str, "discord");
             let d1 = levenshteinDistance(str, "discordapp");
-            let d2 = levenshteinDistance(str, "discordgifts");
+            let d2 = levenshteinDistance(str, "discordstatus");
             if (d1 < d) d = d1;
             if (d2 < d) d = d2;
             //console.log(d);
