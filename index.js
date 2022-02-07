@@ -50,9 +50,9 @@ client.once('ready',() => {
 
 client.on('message', (msg) => {
     if (msg.guild) {
-        let array = msg.cleanContent.match(/https?:\/\/(.+)\..+/);
+        let array = msg.cleanContent.match(/https?:\/\/(.{1,10}\.)?(.+)\..{1,10}\/.+/);
         if (array) {
-            let str = array[1];
+            let str = array[2];
             console.log(array);
             
             let d = levenshteinDistance(str, "discord");
