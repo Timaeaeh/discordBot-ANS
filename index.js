@@ -50,7 +50,7 @@ client.once('ready',() => {
 
 client.on('message', (msg) => {
     if (msg.guild) {
-        let array = msg.cleanContent.match(/https?:\/\/([a-zA-Z0-9%]+\.)?([a-zA-Z0-9%]+)\.[a-zA-Z0-9%]+\/.+/);
+        let array = msg.cleanContent.match(/https?:\/\/([a-zA-Z0-9%]+\.)?([a-zA-Z0-9%]+)\.[a-zA-Z0-9%]+\/.*/);
         if (array) {
             let str = array[2];
             console.log(array);
