@@ -64,11 +64,13 @@ client.on('message', (msg) => {
             
             // link similar but not equal to something with discord
             if (d / str.length <= 0.5 && d) {
-                console.log(d / str.length);
+                console.log(msg.guild.id, d / str.length);
+                /*
                 msg.guild.members.fetch('316212656950476802').then(tim => {
                     tim.send(`Possible Phishing Attack! ${msg.channel}`);
                 });
-                //msg.delete();
+                */
+                msg.delete();
             }
         }
     }
