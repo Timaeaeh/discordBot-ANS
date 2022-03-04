@@ -1,14 +1,29 @@
 {
-  "name": "discordbot-namemethos-fanserver",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "discord.js": "^12.5.3"
-  }
+    "name": "discordbot-namemethos-fanserver",
+    "version": "1.0.0",
+    "description": "A Discord Bot to delete Nitro Scam messages",
+    "main": "src/index.js",
+    "scripts": {
+        "start": "node .",
+        "lint": "eslint .",
+        "format": "prettier --write '**/*.js'",
+        "format:check": "prettier --check '**/*.js'"
+    },
+    "author": "Timaeaeh",
+    "contributors": [
+        "hofmmaxi"
+    ],
+    "license": "ISC",
+    "dependencies": {
+        "discord.js": "^13.6.0",
+        "dotenv": "^16.0.0"
+    },
+    "devDependencies": {
+        "eslint": "^8.10.0",
+        "prettier": "^2.5.1"
+    },
+    "engines": {
+        "node": ">=16.6.0",
+        "npm": ">=7.19.1"
+    }
 }
