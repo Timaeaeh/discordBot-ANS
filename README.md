@@ -1,11 +1,21 @@
-# discordBot-ANS
+<div>
+    <h1>🤖 discordBot-ANS</h1>
+</div>
 
-## A Discord Bot to delete Nitro Scam messages
+<div>
+    <p align="left">A Discord Bot to delete Nitro Scam messages</p>
+</div>
 
-Note: A `.env` file with
+&nbsp;
+
+# 🚀 Get Started:
+
+1. > run `npm install`
+
+2. > then **manually** create a `.env` file containing:
 
 ```md
 BOT_TOKEN=>your bot token<
 ```
 
-needs to be added **manually**!
+3. > run `npm start` to start the bot
