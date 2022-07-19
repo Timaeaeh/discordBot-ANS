@@ -1,6 +1,7 @@
 #Custom
 token.json
-.vscode
+.idea
+.vscode/
 start.sh
 
 
