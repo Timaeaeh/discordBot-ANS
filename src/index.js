@@ -1,15 +1,16 @@
-import { Client, Intents } from "discord.js";
+import { Client } from "discord.js";
+import { GatewayIntentBits } from "discord-api-types/v10";
 import { config } from "dotenv";
 import levenshtein from "js-levenshtein";
 config();
 
 const client = new Client({
     intents: [
-        Intents.FLAGS.GUILDS,
-        Intents.FLAGS.GUILD_MESSAGES,
-        Intents.FLAGS.DIRECT_MESSAGES,
-        Intents.FLAGS.DIRECT_MESSAGE_TYPING,
-        Intents.FLAGS.GUILD_MEMBERS,
+        GatewayIntentBits.Guilds,
+        GatewayIntentBits.GuildMessages,
+        GatewayIntentBits.DirectMessages,
+        GatewayIntentBits.DirectMessageTyping,
+        GatewayIntentBits.GuildMembers,
     ],
 });
 
