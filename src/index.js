@@ -1,5 +1,5 @@
-import { Client } from "discord.js";
-import { GatewayIntentBits } from "discord-api-types/v10";
+// @ts-check
+import { Client, GatewayIntentBits } from "discord.js";
 import { config } from "dotenv";
 import levenshtein from "js-levenshtein";
 config();
