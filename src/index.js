@@ -1,8 +1,7 @@
 // @ts-check
 import { Client, GatewayIntentBits } from "discord.js";
-import { config } from "dotenv";
 import levenshtein from "js-levenshtein";
-config();
+await import("dotenv/config");
 
 const client = new Client({
     intents: [
