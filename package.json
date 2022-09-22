@@ -12,7 +12,11 @@
     },
     "author": "Timaeaeh",
     "contributors": [
-        "hofmmaxi"
+        {
+            "email": "mh@wildemail.de",
+            "name": "Maximilian Hofmann",
+            "url": "https://maxi.wildemail.de"
+        }
     ],
     "license": "ISC",
     "dependencies": {
