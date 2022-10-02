@@ -19,16 +19,16 @@ client.once("ready", () => {
 
 client.on("messageCreate", async msg => {
     if (msg.guild) {
-        let array = msg.cleanContent.match(
+        const array = msg.cleanContent.match(
             /https?:\/\/([a-zA-Z\d%]+\.)?([a-zA-Z\d%]+)\.[a-zA-Z\d%]+\/.*/,
         );
         if (array) {
-            let str = array[2];
+            const str = array[2];
             console.log(array);
 
             let d = levenshtein(str, "discord");
-            let d1 = levenshtein(str, "discordapp");
-            let d2 = levenshtein(str, "discordstatus");
+            const d1 = levenshtein(str, "discordapp");
+            const d2 = levenshtein(str, "discordstatus");
             if (d1 < d) d = d1;
             if (d2 < d) d = d2;
             console.log(d);
