@@ -1,5 +1,6 @@
 // @ts-check
-import { Client, GatewayIntentBits } from "discord.js";
+import { Client } from "discord.js";
+import { GatewayIntentBits } from "discord-api-types/v10"
 import levenshtein from "js-levenshtein";
 await import("dotenv/config");
 
@@ -47,4 +48,4 @@ client.on("messageCreate", async msg => {
     }
 });
 
-client.login(process.env.BOT_TOKEN);
+await client.login(process.env.BOT_TOKEN);
