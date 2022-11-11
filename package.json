@@ -20,13 +20,13 @@
     ],
     "license": "ISC",
     "dependencies": {
-        "discord-api-types": "^0.37.16",
+        "discord-api-types": "^0.37.17",
         "discord.js": "^14.6.0",
         "dotenv": "^16.0.3",
         "js-levenshtein": "^1.1.6"
     },
     "devDependencies": {
-        "eslint": "^8.26.0",
+        "eslint": "^8.27.0",
         "prettier": "^2.7.1"
     },
     "engines": {
