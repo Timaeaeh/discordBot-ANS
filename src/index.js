@@ -3,7 +3,7 @@ import { env } from "node:process";
 
 import { Client, Events } from "discord.js";
 import { GatewayIntentBits } from "discord-api-types/v10";
-import levenshtein from "js-levenshtein";
+import levenshtein from "js-levenshtein-esm";
 await import("dotenv/config");
 
 const client = new Client({

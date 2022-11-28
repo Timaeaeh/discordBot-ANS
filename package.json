@@ -23,7 +23,7 @@
         "discord-api-types": "^0.37.20",
         "discord.js": "^14.7.0",
         "dotenv": "^16.0.3",
-        "js-levenshtein": "^1.1.6"
+        "js-levenshtein-esm": "^1.2.0"
     },
     "devDependencies": {
         "eslint": "^8.28.0",
