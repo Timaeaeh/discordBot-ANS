@@ -1,6 +1,8 @@
 // @ts-check
-import { Client } from "discord.js";
-import { GatewayIntentBits } from "discord-api-types/v10"
+import { env } from "node:process";
+
+import { Client, Events } from "discord.js";
+import { GatewayIntentBits } from "discord-api-types/v10";
 import levenshtein from "js-levenshtein";
 await import("dotenv/config");
 
@@ -14,11 +16,11 @@ const client = new Client({
     ],
 });
 
-client.once("ready", () => {
+client.once(Events.ClientReady, () => {
     console.log("I'm ready!");
 });
 
-client.on("messageCreate", async msg => {
+client.on(Events.MessageCreate, async msg => {
     if (msg.guild) {
         const array = msg.cleanContent.match(
             /https?:\/\/([a-zA-Z\d%]+\.)?([a-zA-Z\d%]+)\.[a-zA-Z\d%]+\/.*/,
@@ -48,4 +50,4 @@ client.on("messageCreate", async msg => {
     }
 });
 
-await client.login(process.env.BOT_TOKEN);
+await client.login(env["BOT_TOKEN"]);
